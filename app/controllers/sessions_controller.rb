@@ -1,8 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    json = { status: token, error: "Ошибка"}.to_json
-    render json: json
+    render json: { status: "ok", error: "Ошибка"}.to_json
   end
 
   def create
