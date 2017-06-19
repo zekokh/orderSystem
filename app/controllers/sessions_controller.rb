@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         json = { status: "400", error: "Ошибка аутентификации"}.to_json
       end
     else
-      json = { status: "400", error: "Ошибка c параметрами", details: params[:login] }.to_json
+      json = { status: "400", error: "Ошибка c параметрами", login: params[:login], password: params[:password] }.to_json
     end
 
     render json: json
